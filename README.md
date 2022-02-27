@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Red Light - Green Light
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+INFORMACIÓN GENERAL SOBRE LA APLICACIÓN:
 
-## Available Scripts
+Se basa en un simple juego, en el que nos registraremos con un usario, y nos llevara a la pantalla de juego, en esta tendremos dos botones de izquieda y derecha que los pulsaremos en orden alterno cuando tengamos semaforo en verde y sumaremos un punto, si pulsamos el mismo boton restaremos un punto
+Si pulsamos cualquiera de los dos botones cuando esta la señal prohibida nuestra puntuacion caera a 0.
+El boton salir guardara la información de puntos y el mejor puntuaje, cuando vuelva a jugar con el mismo nombre continuara con estos puntos.
 
-In the project directory, you can run:
+### LENGUAJES:
 
-### `npm start`
+Esta aplicación ha sido desarrollada con javascript con la librería React.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### LIBRERIAS DESTACADAS:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- styled-components: Para usar CSS in JS y estilizar los componentes.
+- react-router-dom v6: Permite redirigir al usuario a una pagina u otra en funcion de las acciones que haga y si lo tiene permitido.
 
-### `npm test`
+- Jest.js y react-testing-library: para realizar las pruebas de forma rápida y sencilla.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- localbase: Guardar el estado de los jugadores en base de datos local. Es un wrapper del API de IndexedDB
+- eslint: Calidad de codigo.
+- prettier: Formatea de forma automatica el codigo
 
-### `npm run build`
+### ARRANQUE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Para arrancar el proyecto en development:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  > npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Para ver si tenemos fallos de codigo o malas practicas, formatear el codigo, y ver los test:
 
-### `npm run eject`
+  > npm run build
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Arrancar modo production ver funcionamiento PWA (modo offline)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Instalar primero serve de forma global:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   > npm i serve -g
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Arrancar mediante el comando
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   > serve -s build
